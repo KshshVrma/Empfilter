@@ -40,7 +40,14 @@ function App() {
   };
 
   return (
-    <div style={{backgroundColor: "lightblue"}}>
+    <div style={{
+      color: "white",
+      backgroundColor: "DodgerBlue",
+      padding: "10px",
+      fontFamily: "Arial",
+       textAlign: 'center', // <-- the magic
+    
+    }}>
       <h1>Employee Filter</h1>
       <input type="text" value={filter} onChange={handleFilterChange} placeholder="Filter by name/designation/skills" />
       <ul>
