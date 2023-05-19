@@ -57,7 +57,7 @@ function App() {
     }}>
       <h1>Employee Filter</h1>
       <input style={{border: '3 px dotted black'}} type="text" value={filter} onChange={handleFilterChange} placeholder="Filter by name/designation/skills" />
-      <ul style={{  }}>
+      <ol style={{  }}>
         {filteredEmployees.map((employee) => (
           <li style={{ padding: "10px",border: '4px solid black', } } key={employee.id}>
             <h2>{employee.name}</h2>
@@ -65,7 +65,7 @@ function App() {
             <p>Skills: {employee.skills.join(', ')}</p>
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }
