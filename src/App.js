@@ -45,14 +45,17 @@ function App() {
       backgroundColor: "DodgerBlue",
       padding: "10px",
       fontFamily: "Arial",
-       textAlign: 'center', // <-- the magic
-    
+       textAlign: 'center', 
+       border: '4px solid black', 
+       borderRadius: '5px',
+       boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.2)'
+     
     }}>
       <h1>Employee Filter</h1>
-      <input type="text" value={filter} onChange={handleFilterChange} placeholder="Filter by name/designation/skills" />
+      <input style={{border: '3 px dotted black'}} type="text" value={filter} onChange={handleFilterChange} placeholder="Filter by name/designation/skills" />
       <ul>
         {filteredEmployees.map((employee) => (
-          <li key={employee.id}>
+          <li style={{ } } key={employee.id}>
             <h2>{employee.name}</h2>
             <p>Designation: {employee.designation}</p>
             <p>Skills: {employee.skills.join(', ')}</p>
