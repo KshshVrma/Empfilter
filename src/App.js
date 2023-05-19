@@ -38,7 +38,7 @@ function App() {
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
   };
-
+  
   return (
     <div style={{
       color: "white",
@@ -48,14 +48,18 @@ function App() {
        textAlign: 'center', 
        border: '4px solid black', 
        borderRadius: '5px',
-       boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.2)'
+       boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.2)',
+      //  backgroundImage: 'url("https://pixabay.com/illustrations/pattern-abstract-pastels-nude-color-7077094/")',
+      //  backgroundSize: 'cover',
+      //  backgroundPosition: 'center',
+      //  backgroundRepeat: 'no-repeat'
      
     }}>
       <h1>Employee Filter</h1>
       <input style={{border: '3 px dotted black'}} type="text" value={filter} onChange={handleFilterChange} placeholder="Filter by name/designation/skills" />
-      <ul>
+      <ul style={{  }}>
         {filteredEmployees.map((employee) => (
-          <li style={{ } } key={employee.id}>
+          <li style={{ padding: "10px",border: '4px solid black', } } key={employee.id}>
             <h2>{employee.name}</h2>
             <p>Designation: {employee.designation}</p>
             <p>Skills: {employee.skills.join(', ')}</p>
